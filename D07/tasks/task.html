@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Untitled Document</title>
+
+</head>
+
+<body>
+    <input type="button" value=" 1 " onclick="writeVal(this.value)">
+    <input type="button" value=" 2 " onclick="writeVal(this.value)">
+    <input type="button" value=" 3 " onclick="writeVal(this.value)">
+    <input type="button" value=" 4 " onclick="writeVal(this.value)">
+    <input type="button" value=" 5 " onclick="writeVal(this.value)">
+    <input type="button" value=" 6 " onclick="writeVal(this.value)">
+    <input type="text" name="usr" id="txt1" onfocus="select()" onblur="console.log(this.value)">
+
+    <input type="button" onclick="deleteAll()" value=" clear ">
+    <input type="button" onclick="deletElment()" value=" >> ">
+    <input type="button" onclick="add()" value=" = ">
+    <script>
+        function writeVal(val) {
+            document.getElementById("txt1").value += val.trim();
+
+        }
+
+        function deletElment() {
+            var currentText = document.getElementById("txt1").value;
+            if (currentText.length > 0) {
+                document.getElementById("txt1").value = currentText.slice(0, -1);
+            }
+        }
+
+        function deleteAll() {
+
+            document.getElementById("txt1").value = "";
+        }
+        function add() {
+            var num1 = parseInt(document.getElementById("txt1").value);
+            var num2 = parseInt(document.getElementById("txt1").value);
+            var sum = num1 + num2;
+            document.getElementById("txt1").value = sum;
+        }
+      
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

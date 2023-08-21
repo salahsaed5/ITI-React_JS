@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Showing Pics</h1>
+<hr>
+<input type="button" value=" Next " onclick="next()">
+<input type="button" value=" Slideshow " onclick="slideshow()">
+<input type="button" value=" Stop " onclick="stop()">
+<input type="button" value=" pervious " onclick="pervious()">
+
+    <script>
+
+var imgContainer = document.getElementById("imgContainer");
+var slideshowContainer = document.getElementById("slideshowContainer");
+var imgs = []
+for (var i = 1; i < 7; i++) {
+    imgs[i] = document.createElement("img");
+    document.imgs[i].src ="./SlideShow/${i}.jpg" ;
+}
+var counter = 1;
+function next() {
+    if (counter < 7) {
+        imgContainer.appendChild(imgs[counter])
+        if (counter < 1)
+            imgContainer.removeChild(imgs[counter - 1])
+        console.log(counter)
+        counter += 1
+
+
+    }
+
+    else {
+        counter = 6
+    }
+}
+var intervalid
+function slideshow() {
+    intervalid = setInterval(next, 2000);
+
+}
+function stop() {
+
+    clearInterval(intervalid)
+}
+
+function pervious() {
+    console.log(imgContainer.childNodes)
+    imgContainer.removeChild(imgContainer.lastChild)
+    if (counter >= 2)
+        counter -= 1
+    imgContainer.appendChild(imgs[counter])
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        console.log(location.search.split("&")[0].split("="[1]))
+        var first = location.search.split("&")[0].split("=")[1].replaceAll("+"," ");
+        var emaill = location.search.split("&")[1].split("=")[1].replace("%40","@ ");
+        var pass = location.search.split("&")[2].split("=")[1].replaceAll("+"," ");
+        console.log(first)
+        console.log(emaill)
+        console.log(pass)
+        document.write(" <h2>Hallo  "+first+" <br> Email :  "+emaill +"<br>Your Password : "+ pass);
+        
+        
+        
+        
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+* {
+    background-color: rgb(15, 224, 231);
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 300px;
+    height: 400px;
+    border-top-color: rgb(13, 172, 177);
+    border-left-color: rgb(10, 132, 136);
+    border-right-color: rgb(4, 43, 44);
+    border-bottom-color: rgb(4, 43, 44);
+
+    border-width: 8px;
+    border-style: solid;
+}
+input{
+    color: "white";
+}
+legend{
+    color: #3100d2;
+}
+
