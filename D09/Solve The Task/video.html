@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Player</title>
+<style>
+   
+  video {
+
+    width: 100%;
+    max-width: 600px;
+  }
+</style>
+</head>
+<body>
+  <video id="videoPlayer" controls>
+    <source src="frozen.mp4" type="video/mp4">
+  </video>
+<br>
+  <button id="playButton">Play</button>
+  <button id="PauseButton">Pause</button>
+  <button id="StopButton">Stop</button>
+  <button id="SlowButton"><<</button>
+  <button id="SlowForwardButton"><</button>
+  <button id="fastForwardButton">></button>
+  <button id="SpeedButton">>></button>
+
+  <br>
+  <input id="Muted" type="button" value="MUted" >
+   <input id="volumeRange" type="range" min="0" max="1" step="0.01" value="1">
+  
+  <script>
+    var video = document.getElementById('videoPlayer');
+    var playButton = document.getElementById('playButton');
+    var PauseButton = document.getElementById('PauseButton');
+    var StopButton = document.getElementById('StopButton');
+    var fastForwardButton = document.getElementById('fastForwardButton');
+    var SlowForwardButton = document.getElementById('SlowForwardButton');
+    var volumeRange = document.getElementById('volumeRange');
+    var Muted = document.getElementById('Muted');
+    var SlowButton = document.getElementById('SlowButton');
+    var SpeedButton = document.getElementById('SpeedButton');
+    
+    playButton.addEventListener('click', function() {
+     
+        video.play();
+
+    });
+
+
+    PauseButton.addEventListener('click', function() {
+
+        video.pause();
+    });
+
+    
+    StopButton.addEventListener('click', function() {
+      video.currentTime -= 5;
+    });
+
+    
+    fastForwardButton.addEventListener('click',function() {
+      video.currentTime += 5;
+    });
+
+
+    SlowForwardButton.addEventListener('click',function() {
+      video.currentTime -= 5;
+    });
+    
+
+    volumeRange.addEventListener('input', function() {
+      video.volume = volumeRange.value;
+    });
+    
+    
+    Muted.addEventListener('click', function(){
+      if (video.muted) {
+        video.muted = false;
+      } else {
+        video.muted = true;
+      }
+    });
+
+    SlowButton.addEventListener('click',function() {
+        video.playbackRate -= 0.5 ;
+    });
+    
+    SpeedButton.addEventListener('click',function() {
+        video.playbackRate += 0.5 ;
+    });
+    
+  </script>
+</body>
+</html>
