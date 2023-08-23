@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.fading-image {
+    max-width: 100%;
+    opacity: 0; /* Start with 0 opacity */
+    animation: fadeIn 2s ease-in-out; /* Apply the fadeIn animation */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1; 
+    }
+}
+.fading-image{
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+</style> 
+<title>Fading Image Animation</title>
+</head>
+<body>
+    <div class="container">
+        <img src="1.png" height="300" width="300" class="fading-image">
+    </div>
+</body>
+</html>
