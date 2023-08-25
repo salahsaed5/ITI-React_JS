@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #eee;
+            text-align: center;
+            margin-top: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="500" height="500"></canvas>
+
+    <script>
+        var canvas = document.querySelector("canvas");
+        var ctx = canvas.getContext("2d");
+        canvas.style.border = "3px solid black"
+
+        var grad1 = ctx.createLinearGradient(0, 0, 0, 250)
+        grad1.addColorStop('0', 'skyblue')
+        grad1.addColorStop('1', "white")
+        ctx.fillStyle = grad1
+        ctx.fillRect(0, 0, 500, 250)
+
+
+
+        var grad2 = ctx.createLinearGradient(0, 250, 0, 500)
+        grad2.addColorStop('0', 'green')
+        grad2.addColorStop('1', "white")
+        ctx.fillStyle = grad2
+        ctx.fillRect(0, 250, 500, 250)
+
+
+        ctx.beginPath();
+        ctx.moveTo(125, 300);
+        ctx.lineTo(125, 125);
+        ctx.lineTo(375, 125);
+        ctx.lineTo(375, 300);
+        ctx.lineWidth = 2;
+        ctx.linecap = "round";
+        ctx.stroke();
+
+
+    </script>
+</body>
+
+</html>

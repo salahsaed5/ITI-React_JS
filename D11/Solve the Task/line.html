@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <canvas width="500" height="500"></canvas>
+    <script>
+        var canvas = document.querySelector("canvas");
+        var ctx = canvas.getContext("2d");
+        var x = 10;
+        var y = 10;
+        ctx.strokeStyle = "red"
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(x, y);
+        ctx.lineWidth = 5;
+        ctx.stroke();
+
+
+        setInterval(() => {
+            x += 10
+            y += 10
+            ctx.lineTo(x, y);
+            ctx.stroke();
+        }, 50);
+        setTimeout("alert('Done')", 2600)
+
+    </script>
+
+
+</body>
+
+</html>
