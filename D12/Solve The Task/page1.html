@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Page with Flexbox</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font: 1em sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      .Nav {
+        background-color: #271a89;
+        color: #fff;
+        padding: 20px;
+      }
+
+      .Nav ul {
+        list-style: none;
+        justify-content: space-between;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .Nav ul li {
+        margin-right: 20px;
+      }
+
+      .content {
+        background-color: #c0a6a6;
+        padding: 10px;
+        margin: 10px;
+        flex-basis: 50vw;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+      
+      
+
+      @media only screen and (max-width: 600px) {
+        .container {
+          display: flex;
+          flex-direction: column;
+        }
+        .content:nth-child(2) {
+          display: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        <h3>First Div</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. A quas,
+          magnam corporis eligendi quos omnis. Odio, expedita repellat enim,
+          officiis nam impedit reprehenderit dolore distinctio autem temporibus
+          ipsam a vero?
+        </p>
+      </div>
+      <div class="content">
+        <h3>Second Div</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, omnis
+          recusandae? Amet vitae ducimus quam libero porro, tempore, illum
+          voluptatem eos, illo maxime pariatur velit in. Iste dicta distinctio
+          sint.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
