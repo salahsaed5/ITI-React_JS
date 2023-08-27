@@ -1,0 +1,17 @@
+.parent{
+    border: 3px solid gray;
+    width: 40em;
+    height: 40em;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent > div{
+border: 3px solid red;
+ width: 10em;
+ height:10em;
+ text-align: center;
+
+}
