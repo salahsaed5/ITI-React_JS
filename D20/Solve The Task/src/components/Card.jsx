@@ -34,7 +34,7 @@ export default function RecipeReviewCard({ movie, imgPath }) {
     };
 
     return (
-        <Card sx={{ maxWidth: 350 }}>
+        <Card sx={{ maxWidth: 400 , maxHeight:800 }}>
             <CardHeader
 
                 action={
@@ -49,7 +49,8 @@ export default function RecipeReviewCard({ movie, imgPath }) {
             />
             <CardMedia
                 component="img"
-                height="300"
+                height="400"
+                width="400"
                 image={imgPath + movie.poster_path}
             />
             <CardContent>

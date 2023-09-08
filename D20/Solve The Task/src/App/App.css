@@ -16,6 +16,12 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.home{
+  color:rgb(255, 255, 255);
+ 
+
+
+}
 
 .App-header {
   background-image: url('/s.jpg');
@@ -25,7 +31,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(0, 0, 0);
   background-size: cover; 
   background-repeat: no-repeat;
   background-attachment: fixed; 
@@ -34,7 +40,7 @@
   height: 100vh;
 }
 
-.App-link {
+.App-li nk {
   color: #61dafb;
 }
 
@@ -49,8 +55,9 @@
 
 
 .movie-card-container{
-  background-color: #010101;
-  min-height: 300vh;
+  background-image: url('/sss.jpg');
+  min-height: 380vh;
+  /* min-width: 10vh; */
   display:flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -58,17 +65,7 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: auto;
+  padding: 1; 
 }
 
-.Bar{
-  background-color: #000000;
-  min-height: 100vh;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  justify-content: space-around;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 

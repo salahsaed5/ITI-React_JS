@@ -5,7 +5,7 @@ const HomePage = () => {
     return (
         <div className="background-container"> 
         <div className='App-header'>
-            <h1 style={{color:"red" ,fontFamily:"revert-layer" ,backgroundColor:"ActiveCaption"}} >  Welcome to Netflix</h1>
+            <h1 className='home' style={{fontFamily:"revert-layer" ,fontSize:90 ,textShadow: '5px 2px 3px red' }} >  Welcome to Netflix</h1>
         </div>
         </div>
     );
